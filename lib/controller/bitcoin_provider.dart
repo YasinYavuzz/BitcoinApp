@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 
 class BitcoinProvider extends ChangeNotifier{
 
-  //List<BitcoinModel> model = [];
- 
-  // getBitcoinData() async{
-  //   model = await getCurrentCoin();
-  //   //notifyListeners();
-  //   return model;
-  // }
+  List<BitcoinModel> model = []; 
+  List values = [];
+
+  getBitcoinData() async{
+    model = await getCurrentCoin(model);
+    notifyListeners();
+  }
 
 }
